@@ -35,8 +35,9 @@ import { PageSocial } from './PageSocial'
 import { GitHubShareButton } from './GitHubShareButton'
 import { ReactUtterances } from './ReactUtterances'
 
-import styles from './styles.module.css'
 
+import styles from './styles.module.css'
+import Test from './test.jsx' 
 // const Code = dynamic(() =>
 //   import('react-notion-x').then((notion) => notion.Code)
 // )
@@ -275,8 +276,12 @@ export const NotionPage: React.FC<types.PageProps> = ({
           />
         }
       />
+      <Test></Test>
+      
 
       <GitHubShareButton />
     </TwitterContextProvider>
+  
   )
+
 }
