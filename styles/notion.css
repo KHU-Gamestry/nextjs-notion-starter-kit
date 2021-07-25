@@ -337,3 +337,21 @@
 .test_heart {
   margin: 0px 10px 10px 10px;
 }
+#diff_container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  justify-items: center;
+}
+.test_diff_btn {
+  margin: 20px;
+  width: 100px;
+  height: 100px;
+  font-size: 40px;
+  border-radius: 50%;
+  border: none;
+}
+.hidden {
+  display: none;
+}

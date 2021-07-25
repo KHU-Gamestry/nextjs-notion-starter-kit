@@ -1,4 +1,5 @@
 import React,{useEffect} from 'react';
+import { FaParking } from 'react-icons/fa';
 import { IoCaretBackSharp } from 'react-icons/io5';
 export default function test(){
     useEffect(()=>{
@@ -10,6 +11,47 @@ export default function test(){
             const cardBody = document.getElementsByClassName("notion-collection-card-size-large");
 
             var heartState = []; 
+            const DIFF = ['A','B','C','D','ALL'];
+            const par = document.getElementsByClassName("notion-gallery")[0];
+            const HIDDENCLASS = "hidden";
+            const diffBtnDiv = document.createElement("div");
+            diffBtnDiv.id = "diff_container";
+            par.prepend(diffBtnDiv);
+            diffBtnDiv.classList.add("diff_container");
+            for (var i = 0;i<5; i++){
+                const btn = document.createElement("button");
+                btn.id = `test_${DIFF[i]}`;
+                btn.classList.add("test_diff_btn");
+                btn.classList.add("btn");
+                btn.classList.add("btn-outline-secondary");
+                btn.innerText = `${DIFF[i]}`;
+                diffBtnDiv.appendChild(btn);
+                btn.addEventListener("click",handleDiffBtn);
+            }
+            
+            function paintCards(showDiff){
+                const tmp = document.querySelectorAll(".notion-property-multi_select-item");
+                for(var i =3;i<tmp.length;i+=5){
+                    const card = tmp[i].parentNode.parentNode.parentNode.parentNode;
+                    console.log(card);
+                    if(showDiff==="ALL"){
+                        card.classList.remove(HIDDENCLASS);
+                    }
+                    else if(tmp[i].innerText===showDiff){
+                        card.classList.remove(HIDDENCLASS);
+                    }else{
+                        card.classList.add(HIDDENCLASS);
+                    }
+                    
+                }
+            }
+            function handleDiffBtn(event){
+                const clickedDiff = event.target.innerText;
+                console.log(clickedDiff);
+                paintCards(clickedDiff);
+            }
+  
+            
 
             
             function saveHeartState(){
