@@ -12,8 +12,8 @@ module.exports = {
   author: 'khumembership',
 
   // open graph metadata (optional)
-  description: 'Example site description',
-  socialImageTitle: 'Transitive Bullshit',
+  description: 'Gamestry - KHU SW Membership',
+  socialImageTitle: 'Gamestry',
   socialImageSubtitle: 'Hello World! 👋',
 
   // social usernames (optional)
