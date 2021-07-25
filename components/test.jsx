@@ -70,5 +70,5 @@ export default function test(){
     })
     console.log("test");
     const success="success";
-    return <div class="testDiv"></div>;
+    return <div></div>;
 }
