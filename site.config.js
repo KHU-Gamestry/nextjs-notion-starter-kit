@@ -8,7 +8,7 @@ module.exports = {
 
   // basic site info (required)
   name: 'Gamestry',
-  domain: 'Gamest.ry',
+  domain: 'gamestry.vercel.app',
   author: 'khumembership',
 
   // open graph metadata (optional)
