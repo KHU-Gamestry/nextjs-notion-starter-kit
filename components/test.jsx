@@ -33,11 +33,11 @@ export default function test(){
                 const tmp = document.querySelectorAll(".notion-property-multi_select-item");
                 for(var i =3;i<tmp.length;i+=5){
                     const card = tmp[i].parentNode.parentNode.parentNode.parentNode;
-                    console.log(card);
+                    
                     if(showDiff==="ALL"){
                         card.classList.remove(HIDDENCLASS);
                     }
-                    else if(tmp[i].innerText===showDiff){
+                    else if(tmp[i].innerText===`난이도 ${showDiff}`){
                         card.classList.remove(HIDDENCLASS);
                     }else{
                         card.classList.add(HIDDENCLASS);
@@ -47,7 +47,6 @@ export default function test(){
             }
             function handleDiffBtn(event){
                 const clickedDiff = event.target.innerText;
-                console.log(clickedDiff);
                 paintCards(clickedDiff);
             }
   
