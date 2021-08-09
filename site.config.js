@@ -1,6 +1,6 @@
 module.exports = {
   // where it all starts -- the site's root Notion page (required)
-  rootNotionPageId: 'Blog-3fe590a6c59b4e8ab154a1496b656cdc',
+  rootNotionPageId: '3fe590a6c59b4e8ab154a1496b656cdc',
 
   // if you want to restrict pages to a single notion workspace (optional)
   // (this should be a Notion ID; see the docs for how to extract this)
@@ -8,12 +8,12 @@ module.exports = {
 
   // basic site info (required)
   name: 'Gamestry',
-  domain: 'Gamest.ry',
+  domain: 'gamestry.vercel.app',
   author: 'khumembership',
 
   // open graph metadata (optional)
-  description: 'Example site description',
-  socialImageTitle: 'Transitive Bullshit',
+  description: 'Gamestry - KHU SW Membership',
+  socialImageTitle: 'Gamestry',
   socialImageSubtitle: 'Hello World! 👋',
 
   // social usernames (optional)
